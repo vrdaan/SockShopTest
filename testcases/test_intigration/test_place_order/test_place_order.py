@@ -66,7 +66,6 @@ def user_login_to_account(context):
     """
     session.auth = ("testing1", "testpassword1")
     res = session.get(url="http://localhost/login")
-    print(res.status_code)
 
 
 @given(parsers.parse('user add the product to cart with quantity:{quantity}'))
@@ -125,7 +124,6 @@ def user_added_his_card(context):
         }),
         headers={'Content-Type': 'application/json'}
     )
-    print(res.json())
     context['card_id'] = res.json()['id']
 
     
@@ -154,7 +152,6 @@ def user_place_the_order(context):
         data=json.dumps({}),
         headers={'Content-Type': 'application/json'}
     )
-    print(res.json())
 
 @then('he verify the order details')
 def user_vrify_hit_order(context):

@@ -89,7 +89,6 @@ def user_get_his_addresses(context):
     """
     res = session.get(url="http://localhost/addresses")
     assert res.status_code == 200
-    print("address", res.json())
 
 
 @given(parsers.parse('user add the product to cart with quantity:{quantity}'))

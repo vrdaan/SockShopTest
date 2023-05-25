@@ -20,9 +20,7 @@ To run the test cases and start the server using the provided commands, you can 
    pytest
    ```
    This command will automatically discover and run the test cases.
-   Make sure you have the necessary dependencies installed, such as `pytest` and `pytest_bdd` . Additionally, ensure that Docker is installed and running properly on your machine   
-   at `localhost`. Also we are not using `mock-db` which get purged after every run, so we have to update email on next run, or we  
-   can purge the db.
+   Make sure you have the necessary dependencies installed, such as `pytest` and `pytest_bdd` . Additionally, ensure that Docker is installed and running properly on your machine at `localhost`. Also we are not using `mock-db` which get purged after every run, so we have to update email on next run, or we can purge the db.
 
 6. Below is the postman collection to verify the flow and api's testing using postman.
   ```
