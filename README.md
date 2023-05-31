@@ -19,6 +19,21 @@ To run the test cases and start the server using the provided commands, you can 
    ```
    This command will automatically discover and run the test cases.
 
+   1. If we only want to use the docker-compose and run the test-cases in starting all we need to do is update `docker yml` as
+      ```
+         user-test:
+            build: ../../testcases
+            depends_on:
+               - edge-router
+            container_name: user-test
+            network_mode: "host"
+
+      ```
+      And update the `Dockerfile` for the testcases just add 1 more line
+      ```
+      CMD sleep 100 && pytest
+      ```
+
 5. Once the server is up and running, open a new terminal or command prompt (while keeping the previous one running) and navigate to the `SockShopTest` folder again.
 
 6. Run the tests using the `pytest` command:
