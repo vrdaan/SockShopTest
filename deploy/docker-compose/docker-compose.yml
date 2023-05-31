@@ -173,3 +173,10 @@ services:
     read_only: true
     hostname: user-simulator
     command: "-d 60 -r 200 -c 2 -h edge-router"
+
+  user-test:
+    build: ../../testcases
+    read_only: true
+    depends_on:
+      - edge-router
+    container_name: user-test
