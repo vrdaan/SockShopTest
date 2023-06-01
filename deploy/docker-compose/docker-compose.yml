@@ -176,7 +176,7 @@ services:
 
   user-test:
     build: ../../testcases
-    read_only: true
     depends_on:
-      - edge-router
+        - edge-router
     container_name: user-test
+    network_mode: "host"
