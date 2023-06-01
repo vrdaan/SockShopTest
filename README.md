@@ -14,11 +14,6 @@ To run the test cases and start the server using the provided commands, you can 
    Wait for the Docker containers to start up. The `-d` flag runs the containers in the background.
 
 4. Run the tests using docker
-   ```
-   docker run --net=host docker-compose_user-test sh -c "pytest"
-   ```
-   This command will automatically discover and run the test cases.
-
    1. If we only want to use the docker-compose and run the test-cases in starting all we need to do is update `docker yml` as
       ```
          user-test:
@@ -33,6 +28,11 @@ To run the test cases and start the server using the provided commands, you can 
       ```
       CMD sleep 100 && pytest
       ```
+   2. When we don't want to run using docker-compose
+   ```
+   docker run --net=host docker-compose_user-test sh -c "pytest"
+   ```
+   This command will automatically discover and run the test cases.
 
 5. Test from outside the docker if required.
 
